@@ -1,4 +1,7 @@
 \documentclass[11pt,a4paper]{article}
+
+\def\eqlistlabel#1{\bfseries#1}
+
 \usepackage[cm]{fullpage}
 \usepackage{multicol}
 \usepackage{eqlist}
@@ -13,9 +16,12 @@
 
 \begin{document}
 
-\title{Magit Cheatsheet v0.1}
-\author{Mark Davidson}
-\maketitle
+\begin{center}
+  {
+    \huge \bfseries Magit Cheatsheet
+    \vspace{0.5 cm}
+  }
+\end{center}
 
 \begin{multicols}{2}
 
@@ -155,9 +161,7 @@
 
 \end{multicols}
 
-\paragraph{Originally based on magit cheatsheet from
+\let\thefootnote\relax\footnotetext{Based on magit cheatsheet from
   http://daemianmack.com/magit-cheatsheet.html} %make this footnote
-
-
 
 \end{document}
