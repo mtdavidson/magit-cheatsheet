@@ -1,0 +1,158 @@
+\documentclass[11pt,a4paper]{article}
+%\setlength{\columnsep}{100pt}
+%\setlength{\columnseprule}{1pt}
+\setcounter{secnumdepth}{-1} 
+
+\usepackage[cm]{fullpage}
+\usepackage{multicol}
+
+\begin{document}
+
+\title{Magit Cheatsheet v0.1}
+\author{Mark Davidson}
+\maketitle
+
+\begin{multicols}{2}
+
+\section{Buffers}
+\begin{description}
+\item[M-x magit-status] Magit's status buffer
+\item[\$] magit-process buffer
+\item[g] reload status buffer
+\end{description}
+
+\section{Section Visibility}
+\begin{description}
+\item[TAB] Toggle visibility of current section
+\item[S-TAB] Toggle visibility of current section and its children
+\item[1,2,3,4] Expand current section to the corresponding level of
+  detail - 1,2,3 or 4
+\item[M-1,2,3,4] Expand all sections to the corresponding level of
+  detail - 1,2,3 or 4
+\end{description}
+
+\section{Untracked Files}
+\begin{description}
+\item[s] Add untracked file to staging area
+\item[i] Add file to .gitignore
+\item[C-u i] Prompt for file/directory to add to .gitignore
+\item[I] Add file to .git/info/exclude instead of .gitignore
+\end{description}
+
+\section{Staging and Committing}
+\begin{description}
+\item[s] Stage current hunk
+\item[u] Unstage current hunk
+\item[S] Stage all hunks
+\item[U] Unstage all hunks
+\item[k] Discard uncommitted changes
+\item[c] Prepare for commit
+\item[C-c C-c] Execute commit
+\item[C-C C-a] Make the next commit an amend
+\end{description}
+
+\section{History}
+\begin{description}
+\item[l] History
+\item[L] Verbose history
+\item[C-u l] History segment
+\item[RET] Inspect commit
+\item[a] Stage current commit on your branch
+\item[A] Commit current commit on your current branch
+\item[C-w] Copy sha1 of current commit into kill ring
+\item[=] Show differences between current and marked commits
+\item[..] Make current commit
+\item[.] Unmark current commit if marked
+\item[C-u ..] Unmake marked commit from anywhere
+\end{description}
+
+\section{Reflogs}
+\begin{description}
+\item[h] Browse reflog from HEAD
+\item[H] Browse reflog from chosen point
+\end{description}
+
+\section{Diffing}
+\begin{description}
+\item[d] Show changes between working tree and HEAD
+\item[D] Show changes between two arbitrary revisions
+\item[a] Apply current changes to working tree
+\item[v] Apply current changes to working tree in reverse
+\end{description}
+
+\section{Tagging}
+\begin{description}
+\item[t] Make lightweight tag
+\item[T] Prepare annotated tag
+\item[C-c C-c] Commit annotated tag
+\end{description}
+
+\section{Resetting}
+\begin{description}
+\item[x] Reset your current head to chosen revision
+\item[X] Reset working tree and staging area to most recent commit state
+\end{description}
+
+\section{Stashing}
+\begin{description}
+\item[z] Create new stash
+\item[Z] Create new stash and maintain state
+\item[RET] View stash
+\item[a] Apply stash
+\item[A] Pop stash
+\item[k] Drop stash
+\end{description}
+
+\section{Branching}
+\begin{description}
+\item[b] Switch to different branch
+\item[B] Create and switch to new branch
+\end{description}
+
+\section{Wazzup}
+\begin{description}
+\item[W] Show summary of how other branches relate to current branch
+\item[i] Toggle ignore branch
+\item[C-U w] Show all branches including ignored ones
+\end{description}
+
+\section{Merging}
+\begin{description}
+\item[m] Initiate manual merge
+\item[M] Initiate automatic merge
+\item[R] Initiate of continue a rebase
+\end{description}
+
+\section{Rewriting}
+\begin{description}
+\item[r s] Start a rewrite
+\item[v] Revert a given commit
+\item[r t] remove bookkeeping information from buffer
+\item[r a] Abort rewriting
+\item[r f] Finish rewriting
+\item[r *] Toggle the * mark on pending commit
+\item[r ..] Toggle the .. mark on pending commit
+\end{description}
+
+\section{Pushing and Pulling}
+\begin{description}
+\item[P] git push
+\item[C-u P] git push to specified remote repository
+\item[f] git remote update
+\item[F] git pull
+\end{description}
+
+\section{Interface with Subversion}
+\begin{description}
+\item[N r] git svn rebase
+\item[N c] git svn dcommit
+\end{description}
+
+\end{multicols}
+
+\paragraph{Originally based on magit cheatsheet from
+  http://daemianmack.com/magit-cheatsheet.html}
+
+
+
+\end{document}
