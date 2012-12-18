@@ -1,8 +1,9 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[9pt,a4paper,landscape]{extarticle}
 
 \def\eqlistlabel#1{\bfseries#1}
 
 \usepackage[cm]{fullpage}
+\usepackage[top=0.5cm,bottom=0.5cm,left=0.5cm,right=0.5cm]{geometry}
 \usepackage{multicol}
 \usepackage{eqlist}
 \usepackage[pdftex]{hyperref}
@@ -17,14 +18,9 @@
 
 \begin{document}
 
-\begin{center}
-  {
-    \huge \bfseries Magit Cheatsheet
-    \vspace{0.5 cm}
-  }
-\end{center}
+\hspace*{\fill}{\huge \bfseries Magit Cheatsheet\hspace*{\fill}{}}
 
-\begin{multicols}{2}
+\begin{multicols}{3}
 
 \section{Buffers}
 \begin{eqlist}
